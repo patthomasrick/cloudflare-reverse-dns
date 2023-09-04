@@ -5,3 +5,14 @@
 ## Usage
 
 The script expects the following environment variables to be set:
+
+```sh
+CF_API_TOKEN=your_token_from_cloudflare
+CF_ACCOUNT_ID=your_cloudfare_account_id
+CF_ZONE_ID=your_cloudflare_zone_id
+CF_RECORD_NAME=your.domain.here
+```
+
+See `secret.example.env` for an example.
+
+Once set, then run `python3 src/cloudfare_rdns.py` to start the service.
