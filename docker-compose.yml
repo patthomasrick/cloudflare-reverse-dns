@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  cloudflare-rdns:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - secrets.env
+    volumes:
+      - /app/data
+      - /app/logs
