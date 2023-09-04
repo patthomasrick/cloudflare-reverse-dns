@@ -9,5 +9,9 @@ services:
     env_file:
       - secrets.env
     volumes:
-      - /app/data
-      - /app/logs
+      - data:/app/data
+      - logs:/app/logs
+
+volumes:
+  data:
+  logs:
